@@ -51,7 +51,7 @@ export default function Home({pageInfo, skills, socials, projects}: Props) {
       <section id='contactme' className='snap-start'>
         <ContactMe />
       </section>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

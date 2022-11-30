@@ -2,7 +2,7 @@ import React from 'react'
 
 type Props = {}
 
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <div className='sticky-bottom text-center text-white dark:text-black pb-2'>
       <p className='font-semibold'>
