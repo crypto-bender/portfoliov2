@@ -14,8 +14,7 @@ import { fetchPageInfo } from '../utils/fetchPageInfo';
 import { fetchSkills } from '../utils/fetchSkills';
 import { fetchProjects } from '../utils/fetchProjects';
 import { fetchSocials } from '../utils/fetchSocials';
-import useDarkMode from '../components/useDarkMode';
-
+import Footer from '../components/Footer';
 
 type Props = {
   pageInfo: PageInfo;
@@ -25,19 +24,17 @@ type Props = {
 }
 
 export default function Home({pageInfo, skills, socials, projects}: Props) {
-  const [colorTheme, setTheme] = useDarkMode();
 
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y z-0 snap-proximity overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#06c]/80">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y z-0 snap-proximity overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#06c]/80 dark:bg-slate-300">
       <Head>
         <title>Daniel Chu</title>
         <meta name='description' content='Software Engineer Daniel Chu created a portfolio website'/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
       </Head>
-      {colorTheme === 'light' ? (
-        <button className='w-16 h-16' onClick={()=> setTheme('light')}>Light</button>
-      ) : (
-        <button className='w-16 h-16' onClick={()=> setTheme('dark')}>Dark</button>
-      )}
       <Header socials={socials} />
       <section id="/" className='snap-center'>
         <Hero pageInfo={pageInfo} />
@@ -46,7 +43,7 @@ export default function Home({pageInfo, skills, socials, projects}: Props) {
         <About pageInfo={pageInfo} />
       </section>
       <section id="skills" className='snap-start'>
-      <Skills skills={skills} />
+        <Skills skills={skills} />
       </section>
       <section id="portfolio" className='snap-start'>
         <Projects projects={projects}/>
@@ -54,6 +51,7 @@ export default function Home({pageInfo, skills, socials, projects}: Props) {
       <section id='contactme' className='snap-start'>
         <ContactMe />
       </section>
+      {/* <Footer /> */}
     </div>
   )
 }

@@ -20,6 +20,8 @@
     "framer-motion": "^7.6.7",
     "next": "13.0.3",
     "next-sanity": "^2.1.0",
+    "next-theme": "^0.1.5",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-simple-typewriter": "^4.0.5",
