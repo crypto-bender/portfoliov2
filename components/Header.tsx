@@ -36,8 +36,7 @@ const Header = ({ socials }: Props) => {
         }}
         className="flex flex-row items-center"
       >
-        <Link href="#/">
-          <footer className="sticky bottom-5 w-full cursor-pointer">
+        <Link href="#home">
             <div className="flex items-center justify-center">
               <img
                 className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
@@ -45,7 +44,6 @@ const Header = ({ socials }: Props) => {
                 alt=""
               />
             </div>
-          </footer>
         </Link>
         {/* {renderThemeChanger()} */}
       </motion.div>

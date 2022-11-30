@@ -36,7 +36,7 @@ export default function Home({pageInfo, skills, socials, projects}: Props) {
         <link rel="manifest" href="/site.webmanifest"/>
       </Head>
       <Header socials={socials} />
-      <section id="/" className='snap-center'>
+      <section id="home" className='snap-center'>
         <Hero pageInfo={pageInfo} />
       </section>
       <section id="about" className='snap-start'>
