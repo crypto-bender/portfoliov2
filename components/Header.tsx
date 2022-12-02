@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Social } from '../typings'
 // import { useTheme } from 'next-themes';
 import useDarkMode from './useDarkMode';
+import Image from 'next/image';
 
 type Props = {
   socials: Social[];
@@ -37,13 +38,22 @@ const Header = ({ socials }: Props) => {
         className="flex flex-row items-center"
       >
         <Link href="#home">
-            <div className="flex items-center justify-center">
-              <img
+          <div className="flex items-center justify-center">
+            {/* <img
                 className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
                 src="https://res.cloudinary.com/dxhzukgow/image/upload/v1668623212/Circle-crop-fullres_gaerac.png"
-                alt=""
-              />
-            </div>
+                alt="cryptobender social media icon"
+              /> */}
+            <Image
+              src={
+                "https://res.cloudinary.com/dxhzukgow/image/upload/v1668623212/Circle-crop-fullres_gaerac.png"
+              }
+              alt="cryptobender social media icon"
+              className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+              width={10}
+              height={10}
+            ></Image>
+          </div>
         </Link>
         {/* {renderThemeChanger()} */}
       </motion.div>
@@ -69,7 +79,7 @@ const Header = ({ socials }: Props) => {
             <SocialIcon
               key={social._id}
               url={social.url}
-              fgColor={mounted && colorTheme === 'light' ? 'black' : 'gray'}
+              fgColor={mounted && colorTheme === "light" ? "black" : "gray"}
               bgColor="transparent"
             />
           );
@@ -78,7 +88,7 @@ const Header = ({ socials }: Props) => {
           url="#contactme"
           className="cursor-pointer"
           network="email"
-          fgColor={mounted && colorTheme === 'light' ? 'black' : 'gray'}
+          fgColor={mounted && colorTheme === "light" ? "black" : "gray"}
           bgColor="transparent"
         />
         {mounted && colorTheme === "light" ? (

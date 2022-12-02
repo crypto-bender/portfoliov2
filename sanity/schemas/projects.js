@@ -16,7 +16,11 @@ export default {
       options: {
         hotspot: true,
       },
-
+    },
+    {
+      name: 'imageAlt',
+      title: 'Image Alt',
+      type: 'string'
     },
     {
       name: 'summary',
@@ -42,6 +46,5 @@ export default {
       title: 'LinkkToBuild',
       type: 'url',
     },
-
   ],
 }

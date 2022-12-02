@@ -22,5 +22,10 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: 'imageAlt',
+      title: 'Image Alt',
+      type: 'string'
+    },
   ],
 }

@@ -22,6 +22,11 @@ export default {
       },
     },
     {
+      name: 'imageAlt',
+      title: 'Image Alt',
+      type: 'string'
+    },
+    {
       name: 'backgroundInformation',
       title: 'BackgroundInformation',
       type: 'string',
@@ -35,6 +40,11 @@ export default {
       },
     },
     {
+      name: 'profilePicAlt',
+      title: 'Profile Pic Alt',
+      type: 'string'
+    },
+    {
       name: 'email',
       title: 'Email',
       type: 'string',
@@ -43,8 +53,7 @@ export default {
       name: 'socials',
       title: 'Socials',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'social' }}]
+      of: [{ type: 'reference', to: { type: 'social' }}],
     },
-
   ],
 }
