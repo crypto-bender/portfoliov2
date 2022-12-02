@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { PageInfo } from '../typings';
 import { urlFor } from '../sanity';
+import Image from 'next/image';
 
 type Props = {
   pageInfo: PageInfo;
@@ -18,7 +19,7 @@ const About = ({ pageInfo }: Props) => {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray text-2xl dark:text-black">
         About
       </h3>
-      <motion.img
+      <motion.div
         initial={{
           x: -200,
           opacity: 0,
@@ -28,10 +29,16 @@ const About = ({ pageInfo }: Props) => {
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        src={urlFor(pageInfo?.profilePic).url()}
-        alt={pageInfo?.profilePic.alt}
-        className="pt-5 mt-5 -mb-20 md:mb-0 flex-shrink w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[400px] xl:h-[400px]"
-      />
+        className="relative pt-5 mt-5 -mb-20 md:mb-0 flex-shrink w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[400px] xl:h-[400px]"
+        >
+        <Image
+          className='rounded-full object-cover'
+          src={urlFor(pageInfo?.profilePic).url()}
+          alt={pageInfo?.profilePicAlt}
+          fill
+          sizes='14rem, 16rem, (max-width: 400px)'
+        />
+      </motion.div>
       <div className="space-y-1 px-0 md:px-10">
         <h4 className="text-4xl font-semibold text-center dark:text-black">A little about me</h4>
         <p className="text-base dark:text-black">

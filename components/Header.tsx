@@ -50,9 +50,9 @@ const Header = ({ socials }: Props) => {
               }
               alt="cryptobender social media icon"
               className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              width={10}
-              height={10}
-            ></Image>
+              width={36}
+              height={36}
+            />
           </div>
         </Link>
         {/* {renderThemeChanger()} */}

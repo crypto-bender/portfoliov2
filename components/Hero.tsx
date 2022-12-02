@@ -24,11 +24,17 @@ const Hero = ({pageInfo}: Props) => {
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
       {/* replace img component with next.js image component later to optimize load */}
-      <img
-        className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src={urlFor(pageInfo?.heroImage).url()}
-        alt='its me!'
-      />
+      <div className='relative rounded-full h-32 w-32 mx-auto' >
+        <Image
+          className='object-cover rounded-full'
+          fill
+          priority
+          sizes='8rem'
+          src={urlFor(pageInfo?.heroImage).url()}
+          alt={pageInfo?.imageAlt}
+        />
+
+      </div>
       <div className='z-20'>
         <h2 className='text-sm uppercase text-white dark:text-black pb-2 tracking-[15px]'>
           Software Engineer
