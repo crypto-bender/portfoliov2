@@ -14,7 +14,7 @@ const Tech = ({directionLeft, skill}: Props) => {
   return (
     <div className='group relative flex cursor-pointer'>
       <motion.div
-        className='relative rounded-full border border-gray-500  w-24 h-24 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out'
+        className='relative rounded-full border border-gray-500  w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out'
         initial={{
           x: directionLeft ? -200 : 200,
           opacity: 0,
@@ -27,7 +27,7 @@ const Tech = ({directionLeft, skill}: Props) => {
           src={urlFor(skill?.image).url()}
           alt={skill.imageAlt}
           fill
-          sizes='6rem, 8rem'
+          sizes='6rem, 7rem. 8rem'
         />
       </motion.div>
       <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0'>
